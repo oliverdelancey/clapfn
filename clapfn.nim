@@ -59,17 +59,22 @@ proc removeDashes(s: string): string =
     t.delete(i, i)
   return t
 
-proc addRequiredArgument*(argparser: ArgumentParser, name: string, help: string) =
+proc addRequiredArgument*(argparser: ArgumentParser, name: string,
+    help: string) =
   let cla = RequiredArgument(name: name, help: help)
   argparser.requiredArgs.add(cla)
 
-proc addStoreArgument*(argparser: ArgumentParser, shortName: string, longName: string, usageInput: string, default: string, help: string) =
-  let cla = StoreArgument(shortName: shortName, longName: longName, usageInput: usageInput, value: default, help: help)
+proc addStoreArgument*(argparser: ArgumentParser, shortName: string,
+    longName: string, usageInput: string, default: string, help: string) =
+  let cla = StoreArgument(shortName: shortName, longName: longName,
+      usageInput: usageInput, value: default, help: help)
   argparser.storeArgs[removeDashes(shortName)] = cla
   argparser.storeArgs[removeDashes(longName)] = cla
 
-proc addSwitchArgument*(argparser: ArgumentParser, shortName: string, longName: string, default: bool, help: string) =
-  let cla = SwitchArgument(shortName: shortName, longName: longName, value: default, help: help)
+proc addSwitchArgument*(argparser: ArgumentParser, shortName: string,
+    longName: string, default: bool, help: string) =
+  let cla = SwitchArgument(shortName: shortName, longName: longName,
+      value: default, help: help)
   argparser.switchArgs[removeDashes(shortName)] = cla
   argparser.switchArgs[removeDashes(longName)] = cla
 
@@ -93,7 +98,7 @@ proc echoUsage(argparser: ArgumentParser) = # echo the usage message
   # collect a string with the name of all required arguments
   for _, arg in argparser.requiredArgs:
     reqs.add(" " & arg.name)
-  
+
   # echo the usage message
   echo "Usage: " & argparser.programName & " [-h] " & opts.join(" ") & reqs
 
@@ -129,13 +134,16 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
       maxNCLen = len(example)
 
   for _, lines in zip(reqNameCol, reqDescCol):
-    reqSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) + colMargin) & lines[1])
+    reqSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) +
+        colMargin) & lines[1])
   for _, lines in zip(optNameCol, optDescCol):
-    optSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) + colMargin) & lines[1])
+    optSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) +
+        colMargin) & lines[1])
   reqSec = deduplicate(reqSec)
   optSec = deduplicate(optSec)
 
-  helpMessage = "Required arguments:\n" & reqSec.join("\n") & "\n\nOptional arguments:\n" & optSec.join("\n")
+  helpMessage = "Required arguments:\n" & reqSec.join("\n") &
+      "\n\nOptional arguments:\n" & optSec.join("\n")
 
   argparser.echoVersion()
   echo argparser.description
@@ -146,7 +154,7 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
 
 
 proc parse*(argparser: ArgumentParser): Table[string, string] =
-  
+
   macro badArg() =
     result = quote do:
       unRecArgs = true
