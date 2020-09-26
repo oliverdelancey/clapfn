@@ -9,7 +9,7 @@
 import tables
 import clapfn
 
-var parser = ArgumentParser("mcp", "My Cool Program", "0.0.0", "A test program.")
+var parser = ArgumentParser(programName: "mcp", fullName: "My Cool Program", description: "A test program.", version: "0.0.0")
 
 # See the wiki for in-depth documentation, especially the purposes of the various parameters.
 
@@ -52,14 +52,14 @@ See `example.nim` for a fully functional example.
 
 ## Documentation
 
-See the [wiki](wiki-link-here) for documentation.
+See the [wiki](https://github.com/oliversandli/clapfn/wiki) for documentation.
 
 ## License
 
-This project uses the [MIT License](license-link-here)
+This project uses the [MIT License](https://github.com/oliversandli/clapfn/blob/master/LICENSE)
 
 ## Contact
 
 Raise an Issue! I'll see you there.
 
-Project link: [project-link](project-link)
+Project link: [https://github.com/oliversandli/clapfn](https://github.com/oliversandli/clapfn)
