@@ -1,4 +1,4 @@
-discard """
+#[
 clapfn v1.0.0
 
   Command
@@ -11,7 +11,7 @@ clapfn v1.0.0
    author: Oliver Sandli
      date: 09/26/20
   license: MIT License
-"""
+]#
 
 import macros
 import parseopt
