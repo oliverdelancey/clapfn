@@ -1,6 +1,6 @@
 # clapfn
 
-`clapfn` is a straightforward, easy-to-use **C**ommand **L**ine **A**rgument **P**arser **F**or **N**im.
+`clapfn` is an easy-to-use **C**ommand **L**ine **A**rgument **P**arser **F**or **N**im.
 
 ## Usage
 
@@ -39,8 +39,18 @@ Required arguments:
 
 Optional arguments:
     -h, --help               Show this help message and exit.
-    -o output, --out output  Specify the output file.
+    -o=output, --out=output  Specify the output file.
     -d, --debug              Enable debug printing.
+```
+
+`clapfn` uses Nim's default delimiter style:
+```bash
+# good
+-o:output
+-o=output
+
+# BAD
+-o output
 ```
 
 The values of the command line arguments are stored in a [Table](https://nim-lang.org/docs/tables.html), and can be accessed thus:
