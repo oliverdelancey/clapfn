@@ -1,5 +1,9 @@
 # clapfn
 
+[![Language](https://img.shields.io/badge/language-nim-yellow?style=flat-square&logo=nim")](https://nim-lang.org/)
+[![Nimble](https://img.shields.io/badge/nimble%20repo-clapfn-yellowgreen?style=flat-square&")](https://nimble.directory/pkg/clapfn)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&logo=github")](https://github.com/oliversandli/clapfn/blob/master/LICENSE")
+
 `clapfn` is an easy-to-use **C**ommand **L**ine **A**rgument **P**arser **F**or **N**im.
 
 ## Installation
