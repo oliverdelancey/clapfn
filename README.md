@@ -15,11 +15,13 @@ var parser = ArgumentParser(programName: "mcp", fullName: "My Cool Program",
 # See the wiki for in-depth documentation, especially the purposes
 # of the various parameters.
 
-# It is not necessary to use the argument names; they are here simply for explanation.
+# It is not necessary to use the argument names; they are here
+# simply for explanation. Note that *all* arguments are required.
 parser.addRequiredArgument(name="in_file", help="Input file.")
 parser.addStoreArgument(shortName="-o", longName="--out", usageInput="output",
                         default="out.file", help="Specify the output file.")
-parser.addSwitchArgument(shortName="-d", longName="--debug", default=false, help="Enable debug printing.")
+parser.addSwitchArgument(shortName="-d", longName="--debug", default=false,
+                         help="Enable debug printing.")
 
 let args = parser.parse()
 
