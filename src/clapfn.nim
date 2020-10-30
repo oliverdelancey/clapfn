@@ -106,7 +106,7 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
   var
     reqNameCol, reqDescCol, optNameCol, optDescCol, reqSec, optSec: seq[string]
     example, helpMessage: string
-    maxNCLen = 0
+    maxNCLen: int
   const
     colMargin = 2
     tabSize = 4
@@ -118,8 +118,14 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
     reqDescCol.add(arg.help)
     if len(arg.name) > maxNCLen:
       maxNCLen = len(arg.name)
+
+  # insert the help entry
+  let helpmsg = "Show this help message and exit."
   optNameCol.add("-h, --help")
-  optDescCol.add("Show this help message and exit.")
+  optDescCol.add(helpmsg)
+  if len(helpmsg) > maxNCLen:
+    maxNCLen = len(helpmsg)
+
   for arg in argparser.storeArgs.values:
     example = arg.shortName & "=" & arg.usageInput & ", " & arg.longName & "=" & arg.usageInput
     optNameCol.add(example)
@@ -137,7 +143,6 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
     reqSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) +
         colMargin) & lines[1])
   for _, lines in zip(optNameCol, optDescCol):
-    echo maxNCLen, " ", len(lines[0]), " ", len(lines[1])
     optSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) +
         colMargin) & lines[1])
   reqSec = deduplicate(reqSec)
