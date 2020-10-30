@@ -120,18 +120,18 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
       maxNCLen = len(arg.name)
 
   # insert the help entry
-  let helpmsg = "Show this help message and exit."
-  optNameCol.add("-h, --help")
-  optDescCol.add(helpmsg)
-  if len(helpmsg) > maxNCLen:
-    maxNCLen = len(helpmsg)
+  let helpargs = "-h, --help"
+  optNameCol.add(helpargs)
+  optDescCol.add("Show this help message and exit.")
+  if len(helpargs) > maxNCLen:
+    maxNCLen = len(helpargs)
 
   # insert the version entry
-  let vermsg = "Show version number and exit."
-  optNameCol.add("-v, --version")
-  optDescCol.add(vermsg)
-  if len(vermsg) > maxNCLen:
-    maxNCLen = len(vermsg)
+  let verargs = "-v, --version"
+  optNameCol.add(verargs)
+  optDescCol.add("Show version number and exit.")
+  if len(verargs) > maxNCLen:
+    maxNCLen = len(verargs)
 
   for arg in argparser.storeArgs.values:
     example = arg.shortName & "=" & arg.usageInput & ", " & arg.longName & "=" & arg.usageInput
