@@ -53,6 +53,7 @@ Required arguments:
 
 Optional arguments:
     -h, --help               Show this help message and exit.
+    -v, --version            Show version number and exit.
     -o=output, --out=output  Specify the output file.
     -d, --debug              Enable debug printing.
 ```
