@@ -2,6 +2,13 @@
 
 `clapfn` is an easy-to-use **C**ommand **L**ine **A**rgument **P**arser **F**or **N**im.
 
+## Installation
+
+Installing is as simple as:
+```bash
+nimble install clapfn
+```
+
 ## Usage
 
 `clapfn` is specifically designed to be straightforward to work with.
