@@ -46,7 +46,7 @@ And if you were to run `mcp --help`:
 My Cool Program v0.0.0
 A test program.
 
-Usage: mcp [-h] [-o output] [-d] in_file
+Usage: mcp [-h] [-v] [-o output] [-d] in_file
 
 Required arguments:
     in_file                  Input file.
