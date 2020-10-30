@@ -100,7 +100,7 @@ proc echoUsage(argparser: ArgumentParser) = # echo the usage message
     reqs.add(" " & arg.name)
 
   # echo the usage message
-  echo "Usage: " & argparser.programName & " [-h] " & opts.join(" ") & reqs
+  echo "Usage: " & argparser.programName & " [-h] [-v] " & opts.join(" ") & reqs
 
 proc echoHelp(argparser: ArgumentParser) = # echo the help message
   var
@@ -125,6 +125,13 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
   optDescCol.add(helpmsg)
   if len(helpmsg) > maxNCLen:
     maxNCLen = len(helpmsg)
+
+  # insert the version entry
+  let vermsg = "Show version number and exit."
+  optNameCol.add("-v, --version")
+  optDescCol.add(vermsg)
+  if len(vermsg) > maxNCLen:
+    maxNCLen = len(vermsg)
 
   for arg in argparser.storeArgs.values:
     example = arg.shortName & "=" & arg.usageInput & ", " & arg.longName & "=" & arg.usageInput
@@ -181,6 +188,9 @@ proc parse*(argparser: ArgumentParser): Table[string, string] =
         case iop.key
         of "h", "help":
           argparser.echoHelp()
+          quit(0)
+        of "v", "version":
+          argparser.echoVersion()
           quit(0)
         else:
           try:
