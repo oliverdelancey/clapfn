@@ -190,7 +190,7 @@ proc parse*(argparser: ArgumentParser): Table[string, string] =
       try:
         argparser.requiredArgs[reqCount].value = iop.key
         reqCount += 1
-      except IndexError:
+      except IndexDefect:
         badArg()
 
   if reqCount < len(argparser.requiredArgs):
