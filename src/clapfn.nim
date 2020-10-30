@@ -137,7 +137,7 @@ proc echoHelp(argparser: ArgumentParser) = # echo the help message
     reqSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) +
         colMargin) & lines[1])
   for _, lines in zip(optNameCol, optDescCol):
-    echo maxNCLen, len(lines[0]), len(lines[1])
+    echo maxNCLen, " ", len(lines[0]), " ", len(lines[1])
     optSec.add(tab & lines[0] & repeat(" ", maxNCLen - len(lines[0]) +
         colMargin) & lines[1])
   reqSec = deduplicate(reqSec)
