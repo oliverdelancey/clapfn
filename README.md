@@ -27,7 +27,7 @@ var parser = ArgumentParser(programName: "mcp", fullName: "My Cool Program",
 # of the various parameters.
 
 # It is not necessary to use the argument names; they are here
-# simply for explanation. Note that *all* arguments are required.
+# simply for explanation. *All* function arguments are required.
 parser.addRequiredArgument(name="in_file", help="Input file.")
 parser.addStoreArgument(shortName="-o", longName="--out", usageInput="output",
                         default="out.file", help="Specify the output file.")
