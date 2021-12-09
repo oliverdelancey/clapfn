@@ -2,7 +2,8 @@ import tables
 import clapfn
 
 var parser = ArgumentParser(programName: "mcp", fullName: "My Cool Program",
-                            description: "A test program.", version: "0.0.0")
+                            description: "A test program.", version: "0.0.0",
+                            author: "An Author <author@domain.com>")
 
 # See the wiki for in-depth documentation, especially the purposes
 # of the various parameters.
