@@ -42,6 +42,7 @@ type
   ArgumentParser* = ref object of RootObj
     programName*: string
     fullName*: string
+    author*: string
     description*: string
     version*: string
     requiredArgs: seq[RequiredArgument]
@@ -80,6 +81,8 @@ proc addSwitchArgument*(argparser: ArgumentParser, shortName: string,
 
 proc echoVersion(argparser: ArgumentParser) = # echo the version message
   echo argparser.fullName & " v" & argparser.version
+  if not argparser.author.isEmptyOrWhitespace():
+    echo argparser.author
 
 proc echoUsage(argparser: ArgumentParser) = # echo the usage message
   var
