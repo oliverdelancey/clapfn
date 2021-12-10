@@ -2,7 +2,7 @@
 
 [![Language](https://img.shields.io/badge/language-nim-yellow?style=flat-square&logo=nim")](https://nim-lang.org/)
 [![Nimble](https://img.shields.io/badge/nimble%20repo-clapfn-yellowgreen?style=flat-square&")](https://nimble.directory/pkg/clapfn)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&logo=github")](https://github.com/oliversandli/clapfn/blob/master/LICENSE")
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square&logo=github")](https://github.com/oliverdelancey/clapfn/blob/master/LICENSE")
 
 `clapfn` is an easy-to-use **C**ommand **L**ine **A**rgument **P**arser **F**or **N**im.
 
@@ -85,14 +85,14 @@ See `example.nim` for a fully functional example.
 
 ## Documentation
 
-See the [wiki](https://github.com/oliversandli/clapfn/wiki) for documentation.
+See the [wiki](https://github.com/oliverdelancey/clapfn/wiki) for documentation.
 
 ## License
 
-This project uses the [MIT License](https://github.com/oliversandli/clapfn/blob/master/LICENSE)
+This project uses the [MIT License](https://github.com/oliverdelancey/clapfn/blob/master/LICENSE)
 
 ## Contact
 
 Raise an Issue! I'll see you there.
 
-Project link: [https://github.com/oliversandli/clapfn](https://github.com/oliversandli/clapfn)
+Project link: [https://github.com/oliverdelancey/clapfn](https://github.com/oliverdelancey/clapfn)

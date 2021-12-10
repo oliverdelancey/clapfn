@@ -8,8 +8,8 @@ clapfn v1.0.0
   For
   Nim
 
-   author: Oliver Sandli
-     date: 09/26/20
+   author: Oliver Delancey
+     date: 12/10/21
   license: MIT License
 ]#
 
