@@ -6,8 +6,8 @@
 
 `clapfn` is an easy-to-use **C**ommand **L**ine **A**rgument **P**arser **F**or **N**im.
 
-Please contact me if you have any issues using this library. I am willing to continue
-mantaining this library; I haven't made any commits lately simply because this project
+Please contact me if you have any issues using this library. This library is actively 
+maintained and supported; I haven't made any commits lately simply because this project
 seems to be stable. But feel free to contact me via an issue, and I will see what I can
 do!
 
