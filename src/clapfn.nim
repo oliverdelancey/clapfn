@@ -57,7 +57,7 @@ proc removeDashes(s: string): string =
     i = t.find("-")
     if i == -1:
       break
-    t.delete(i, i)
+    t.delete(i..i)
   return t
 
 proc addRequiredArgument*(argparser: ArgumentParser, name: string,
