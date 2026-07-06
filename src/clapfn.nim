@@ -20,6 +20,8 @@ import strutils
 import system
 import tables
 
+export tables.Table, tables.`[]`, tables.pairs, tables.keys, tables.values
+
 type
   RequiredArgument = ref object of RootObj
     name: string

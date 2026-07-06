@@ -1,4 +1,3 @@
-import tables
 import clapfn
 
 var parser = ArgumentParser(programName: "mcp", fullName: "My Cool Program",
